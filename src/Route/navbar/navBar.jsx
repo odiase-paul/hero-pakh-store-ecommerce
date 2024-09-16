@@ -1,8 +1,11 @@
 import { Link, Outlet } from "react-router-dom";
 import cartIcon from "../../components/assets/cart-image/shopping-bag.svg";
+import logo from "../../components/backgroundImage/ak_logo.png";
 import "./navBar.css";
-import { Fragment, useState } from "react";
+import { Fragment, useContext, useState } from "react";
+import { ShopContext } from "../../contexts/ShopContext";
 const NavBar = () => {
+  const { getTotalCartItem } = useContext(ShopContext);
   const [horizontalRule, setHorizontalRule] = useState("shop");
 
   return (
@@ -10,8 +13,9 @@ const NavBar = () => {
       <div className="nav-bar-container">
         <div className="nav-bar">
           <div className="logo-div">
-            <Link className="logo" to="/">
-              <h2>LOGO</h2>
+            <Link className="logo">
+              <img src={logo} alt="" />
+              <p>AKH-STORES</p>
             </Link>
           </div>
           <div className="nav-links-container">
@@ -22,7 +26,7 @@ const NavBar = () => {
               className="nav-links"
               to="/"
             >
-              Shop{horizontalRule === "shop" ? <hr /> : ""}
+              Shop{horizontalRule === "shop" ? <hr /> : <></>}
             </Link>
 
             <Link
@@ -30,9 +34,9 @@ const NavBar = () => {
                 setHorizontalRule("men");
               }}
               className="nav-links"
-              to="/men"
+              to="men"
             >
-              Men{horizontalRule === "men" ? <hr /> : ""}
+              Men{horizontalRule === "men" ? <hr /> : <></>}
             </Link>
             <Link
               onClick={() => {
@@ -41,18 +45,16 @@ const NavBar = () => {
               className="nav-links"
               to="women"
             >
-              Women{horizontalRule === "women" ? <hr /> : ""}
+              Women{horizontalRule === "women" ? <hr /> : <></>}
             </Link>
           </div>
           <div className="cart-nav">
             <Link to="login" className="nav-links login">
               Login
             </Link>
-            <Link to="cart">
+            <Link className="cart" to="cart">
               <img className="cart-icon" src={cartIcon} alt="" />
-            </Link>
-            <Link className="count-link" to="cart">
-              <div className="nav-links-count">0</div>
+              <div className="nav-links-count">{getTotalCartItem()}</div>
             </Link>
           </div>
         </div>

@@ -1,7 +1,6 @@
 import "./hero.css";
-import hand_icon from "../../components/backgroundImage/hand-icon.png";
 import hero from "../../components/backgroundImage/hero-image.png";
-// import arrow_icon from "../../";
+
 const Hero = () => {
   return (
     <div className="hero">
@@ -10,15 +9,13 @@ const Hero = () => {
         <div>
           <div className="hero-hand-icon">
             <p>New</p>
-
-            <img className="hand-icon" src={hand_icon} alt="" />
           </div>
           <p>collections</p>
           <p>for everyone</p>
         </div>
         <div className="hero-latest-btn">
           <div>Latest Collection</div>
-          {/* <img src={arrow_icon} alt="" /> */}
+          &rarr;
         </div>
       </div>
       <div className="hero-right">

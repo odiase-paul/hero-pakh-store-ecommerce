@@ -1,10 +1,19 @@
 .nav-bar {
-  padding: 16px 90px;
+  padding: 20px 90px;
   display: flex;
   justify-content: space-between;
 }
-
-.count-link,
+.logo {
+  display: flex;
+  gap: 10px;
+}
+.logo p {
+  padding-top: 5px;
+  color: #383838;
+  font-size: 17px;
+  font-weight: 700;
+}
+.cart,
 .logo {
   text-decoration: none;
   color: #000;
@@ -40,6 +49,7 @@
   font-size: 0.9rem;
   padding: 4px 15px;
   border-radius: 25px;
+  padding-top: 5px;
 }
 .login:active {
   background: #f3f3f3;
@@ -48,15 +58,21 @@
 .cart-icon {
   width: 25px;
   cursor: pointer;
+  margin-right: -23px;
 }
-.cart-nav .nav-links-count {
+.cart {
+  display: flex;
+}
+.cart .nav-links-count {
   width: 22px;
   height: 22px;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 6px;
-  margin-left: -53px;
+  margin-top: 10px;
+  text-decoration: none;
   font-size: 12px;
-  cursor: pointer;
+}
+.logo img {
+  width: 30px;
 }
