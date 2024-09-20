@@ -10,56 +10,73 @@ const NavBar = () => {
 
   return (
     <Fragment>
-      <div className="nav-bar-container">
-        <div className="nav-bar">
+      <nav className="navbar-expand-sm navbar-light bg-light nav-bar-container">
+        <div className="navbar nav-bar container-fluid ">
           <div className="logo-div">
             <Link className="logo">
               <img src={logo} alt="" />
               <p>AKH-STORES</p>
             </Link>
           </div>
-          <div className="nav-links-container">
-            <Link
-              onClick={() => {
-                setHorizontalRule("shop");
-              }}
-              className="nav-links"
-              to="/"
-            >
-              Shop{horizontalRule === "shop" ? <hr /> : <></>}
-            </Link>
+          <button
+            className="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarText"
+            aria-controls="navbarText"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span className="navbar-toggler-icon"></span>
+          </button>
 
-            <Link
-              onClick={() => {
-                setHorizontalRule("men");
-              }}
-              className="nav-links"
-              to="men"
-            >
-              Men{horizontalRule === "men" ? <hr /> : <></>}
-            </Link>
-            <Link
-              onClick={() => {
-                setHorizontalRule("women");
-              }}
-              className="nav-links"
-              to="women"
-            >
-              Women{horizontalRule === "women" ? <hr /> : <></>}
-            </Link>
+          <div className="collapse navbar-collapse " id="navbarText">
+            <div className="nav-links-container navbar-nav ms-auto">
+              <Link
+                onClick={() => {
+                  setHorizontalRule("shop");
+                }}
+                className="nav-links"
+                to="/"
+              >
+                Shop{horizontalRule === "shop" ? <hr /> : <></>}
+              </Link>
+
+              <Link
+                onClick={() => {
+                  setHorizontalRule("men");
+                }}
+                className="nav-links"
+                to="men"
+              >
+                Men{horizontalRule === "men" ? <hr /> : <></>}
+              </Link>
+              <Link
+                onClick={() => {
+                  setHorizontalRule("women");
+                }}
+                className="nav-links"
+                to="women"
+              >
+                Women{horizontalRule === "women" ? <hr /> : <></>}
+              </Link>
+            </div>
           </div>
-          <div className="cart-nav">
-            <Link to="login" className="nav-links login">
-              Login
-            </Link>
-            <Link className="cart" to="cart">
-              <img className="cart-icon" src={cartIcon} alt="" />
-              <div className="nav-links-count">{getTotalCartItem()}</div>
-            </Link>
+
+          <div className="collapse navbar-collapse " id="navbarText">
+            <div className="cart-nav navbar-nav ms-auto login-segment">
+              <Link to="login" className="nav-links login">
+                Login
+              </Link>
+              <Link className="cart" to="cart">
+                <img className="cart-icon" src={cartIcon} alt="" />
+                <div className="nav-links-count">{getTotalCartItem()}</div>
+              </Link>
+            </div>
           </div>
         </div>
         <hr />
-      </div>
+      </nav>
       <Outlet />
     </Fragment>
   );

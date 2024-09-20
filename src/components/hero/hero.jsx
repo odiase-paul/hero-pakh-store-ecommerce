@@ -1,6 +1,6 @@
 import "./hero.css";
 import hero from "../../components/backgroundImage/hero-image.png";
-
+import collection from "../backgroundImage/logo.png";
 const Hero = () => {
   return (
     <div className="hero">
@@ -9,6 +9,7 @@ const Hero = () => {
         <div>
           <div className="hero-hand-icon">
             <p>New</p>
+            <img className="" src={collection} alt="" />
           </div>
           <p>collections</p>
           <p>for everyone</p>
