@@ -66,6 +66,7 @@
   div.item img {
     width: 100%;
     max-width: 300px;
+    height: 25vh;
   }
   div.item p {
     font-size: 1.1rem;
@@ -182,11 +183,221 @@
     padding-top: -10px;
   }
   div.footer .footer-link {
-    gap: 15px;
+    gap: 10px;
     padding: 0;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-size: 0.9rem;
   }
   div.footer .footer-logo p {
     padding-top: 15px;
+  }
+
+  /* category section */
+
+  div.shop-category {
+    width: 100%;
+    padding: 0 40px;
+  }
+  div.shop-category .sortindex-shop-category {
+    margin: 40px 0;
+    gap: 5px;
+  }
+  div.shop-category .sortindex-shop-category p {
+    font-size: 0.6rem;
+  }
+  div.shop-category .shopcategory-sort {
+    font-size: 0.6rem;
+    padding: 5px;
+  }
+  div.shop-category .shopcategory-product {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    justify-content: center;
+  }
+
+  /* login section */
+  div.loginsignup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin-bottom: 40px;
+  }
+
+  div.loginsignup .loginsignup-container {
+    width: 450px;
+    height: fit-content;
+    padding: 30px;
+  }
+  /* breadcrumb section */
+
+  div.breadcrumb {
+    margin: 40px 0;
+    padding: 0 40px;
+    gap: 2px;
+    font-size: 0.7rem;
+  }
+
+  /* productDisplay section */
+
+  div.productdisplay {
+    margin: 0;
+    padding: 0 40px;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  div.productdisplay-left {
+    gap: 5px;
+    height: fit-content;
+  }
+  div.productdisplay-img-list {
+    gap: 5px;
+  }
+  div.productdisplay-img-list img {
+    width: 65px;
+    height: 65px;
+  }
+  div.productdisplay-img img {
+    max-width: 100%;
+    height: 39.5vh;
+  }
+
+  div.productdisplay-right-stars {
+    height: 30px;
+    margin: 0;
+    padding: 0;
+  }
+  div.productdisplay-right-stars p {
+    margin-left: 10px;
+    padding-top: 15px;
+  }
+  div.productdisplay-right-size h1 {
+    margin: 15px 0;
+  }
+  div.productdisplay-right-size div {
+    margin: 0;
+  }
+  div.productdisplay-right .productdisplay-right-category {
+    margin: 0;
+  }
+
+  /* descriptionBox section */
+
+  div.descriptionbox {
+    margin: 30px 0;
+    padding: 0 40px;
+  }
+  div.descriptionbox .decriptionbox-decription {
+    gap: 10px;
+    padding-bottom: 0;
+  }
+
+  /* related product section */
+  div.popular {
+    padding: 50px 40px;
+    height: fit-content;
+  }
+  div.popular h1 {
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+  div.popular hr {
+    margin: 0;
+    width: 100px;
+  }
+  div.popular .popular-item {
+    margin-top: 50px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  div.related-product h1 {
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+  div.related-product hr {
+    margin: 0;
+    width: 100px;
+  }
+  div.related-product {
+    height: fit-content;
+  }
+  div.related-product .related-products-items {
+    flex-wrap: wrap;
+    margin: 50px 0;
+    margin-bottom: 100px;
+    padding: 0 40px;
+    justify-content: center;
+  }
+
+  /*cartItem section*/
+
+  div.cart-item {
+    margin: 50px 40px;
+  }
+  div.cart-item .cartItems-format-main {
+    gap: 8px;
+    font-size: 10px;
+    padding: 10px 0;
+    grid-template-columns: 0.7fr 1.2fr 0.5fr 0.7fr 0.6fr 0.7fr;
+  }
+  div.cartItems-format .cartitem-remove-icon {
+    margin-bottom: 15px;
+    cursor: pointer;
+  }
+  div.cartItems-format .cart-product-icon {
+    width: 45px;
+  }
+  div.cartItems-down {
+    flex-direction: column;
+    gap: 40px;
+    margin: 30px 0 100px 0px;
+  }
+  div.cartItems-down .cartItem-total {
+    margin: 0;
+    gap: 20px;
+  }
+  div.cartItem-total h1 {
+    font-size: 1.3rem;
+  }
+  div.cartItem-total hr {
+    padding: 0;
+    margin: 0 0 10px;
+  }
+  div.cartItems-down .cartItem-total-item {
+    font-size: 0.8rem;
+    padding: 0;
+    margin: 0;
+  }
+  div.cartItem-total-item h3 {
+    font-size: 1rem;
+    font-weight: 600;
+  }
+  div.cartItem-total button {
+    width: 120px;
+    font-size: 0.5rem;
+    height: 30px;
+  }
+  div.cartItem-promocode p {
+    font-size: 0.7rem;
+  }
+  div.cartItem-promobox {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+  div.cartItem-promobox input {
+    height: 20px;
+    width: 60%;
+    font-size: 12px;
+    padding-left: 10px;
+  }
+  div.cartItem-promobox button {
+    width: 180px;
+    max-width: 40%;
   }
 }
 @media only screen and (max-width: 380px) {

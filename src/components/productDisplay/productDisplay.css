@@ -69,6 +69,9 @@
   border-radius: 3px;
   cursor: pointer;
 }
+.productdisplay-right-sizes div:active {
+  background: #f3f3f3;
+}
 .productdisplay-right button {
   padding: 10px 20px;
   width: 200px;
@@ -81,6 +84,9 @@
   border: none;
   border-radius: 3px;
   cursor: pointer;
+}
+.product-display-add:active {
+  background: #ed2727;
 }
 .productdisplay-right-category {
   font-size: 15px;

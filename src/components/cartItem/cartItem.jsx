@@ -20,12 +20,12 @@ const CartItem = () => {
       {AllProducts.map((e) => {
         if (cartItem[e.id] > 0) {
           return (
-            <div>
+            <div key={e.id}>
               <div className="cartItems-format cartItems-format-main">
                 <img className="cart-product-icon" src={e.imageUrl} alt="" />
                 <p>{e.name}</p>
                 <p>${e.new_price}</p>
-                <button className="cartItems-quantity">{cartItem[e.id]}</button>
+                <p className="cartItems-quantity">{cartItem[e.id]}x</p>
                 <p>${e.new_price * cartItem[e.id]}</p>
                 <span
                   onClick={() => {

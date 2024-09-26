@@ -47,6 +47,7 @@ const ProductDisplay = ({ product }) => {
           </div>
         </div>
         <button
+          className="product-display-add"
           onClick={() => {
             addToCart(id);
           }}
