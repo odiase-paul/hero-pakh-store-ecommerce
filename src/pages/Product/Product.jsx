@@ -13,7 +13,7 @@ const Product = () => {
   return (
     <div className="product">
       <Breadcrumb product={product} />
-      <ProductDisplay product={product} />
+      <ProductDisplay productDisplay={product} />
       <DescriptionBox />
       <RelatedProduct />
     </div>

@@ -10,7 +10,7 @@ const NavBar = () => {
 
   return (
     <Fragment>
-      <nav className="navbar-expand-sm navbar-light bg-light nav-bar-container">
+      <nav className="navbar-expand-sm navbar-light bg-light nav-bar-container sticky-top">
         <div className="navbar nav-bar container-fluid ">
           <div className="logo-div">
             <Link className="logo">
@@ -36,29 +36,35 @@ const NavBar = () => {
                 onClick={() => {
                   setHorizontalRule("shop");
                 }}
-                className="nav-links"
+                className={`nav-links ${
+                  horizontalRule === "shop" ? " active" : ""
+                }`}
                 to="/"
               >
-                Shop{horizontalRule === "shop" ? <hr /> : <></>}
+                Shop
               </Link>
 
               <Link
                 onClick={() => {
                   setHorizontalRule("men");
                 }}
-                className="nav-links"
+                className={`nav-links ${
+                  horizontalRule === "men" ? " active" : ""
+                }`}
                 to="men"
               >
-                Men{horizontalRule === "men" ? <hr /> : <></>}
+                Men
               </Link>
               <Link
                 onClick={() => {
                   setHorizontalRule("women");
                 }}
-                className="nav-links"
+                className={`nav-links ${
+                  horizontalRule === "women" ? " active" : ""
+                }`}
                 to="women"
               >
-                Women{horizontalRule === "women" ? <hr /> : <></>}
+                Women
               </Link>
             </div>
           </div>

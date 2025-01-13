@@ -1,8 +1,8 @@
 import { useContext } from "react";
 import "./productDisplay.css";
 import { ShopContext } from "../../contexts/ShopContext";
-const ProductDisplay = ({ product }) => {
-  const { id, imageUrl, name, new_price, old_price } = product;
+const ProductDisplay = ({ productDisplay }) => {
+  const { id, imageUrl, name, new_price, old_price } = productDisplay;
   const { addToCart } = useContext(ShopContext);
 
   return (

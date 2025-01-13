@@ -44,12 +44,8 @@
   text-decoration: none;
   color: #626262;
 }
-.nav-links-container hr {
-  border: none;
-  width: 80%;
-  height: 3px;
-  border-radius: 10px;
-  background: #ff4141;
+.nav-links-container .active {
+  color: #ff4141;
 }
 .login {
   text-decoration: none;
